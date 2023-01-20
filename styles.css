@@ -1,0 +1,24 @@
+* {
+  font-family: "Poppins", sans-serif;
+  margin: auto;
+  text-align: center;
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h1 {
+  font-weight: 600;
+  font-style: semibold;
+}
+
+body {
+  /* background-image: url("background.jpg"); */
+  background: linear-gradient(to right, #d6d3c7, #6e6b62);
+  background-color: #989088;
+  background-attachment: fixed;
+}
