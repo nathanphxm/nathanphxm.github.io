@@ -4,6 +4,66 @@
   text-align: center;
 }
 
+@keyframes in-bottom-fade {
+    from {
+        opacity: 0%;
+    } 
+    to {
+        opacity: 100%;
+    }
+}
+
+@keyframes title-fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes subtitle-fade {
+
+}
+
+.footer1 {
+    opacity: 0;
+    position: fixed;
+    bottom: 0%;
+    width: 100%;
+    height: 70px;
+    animation-name: in-bottom-fade;
+    animation-delay: 2s;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+.footer2 {
+    opacity: 0;
+    position: fixed;
+    bottom: 0%;
+    width: 100%;
+    height: 50px;
+    animation-name: in-bottom-fade;
+    animation-delay: 3s;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+h1 {
+  font-weight: 600;
+  font-style: semibold;
+  animation-name: title-fade;
+}
+
+body {
+  /* background-image: url("background.jpg"); */
+  background: linear-gradient(to right, #f7f6ed, #e0dcbf);
+  background-color: #989088;
+  background-attachment: fixed;
+  
+}
+
 .content {
     position: absolute;
     top: 50%;
@@ -11,14 +71,12 @@
     transform: translate(-50%, -50%);
 }
 
-h1 {
-  font-weight: 600;
-  font-style: semibold;
+.title {
+    animation-name: title-fade;
+    animation-duration: 1s;
 }
 
-body {
-  /* background-image: url("background.jpg"); */
-  background: linear-gradient(to right, #d6d3c7, #6e6b62);
-  background-color: #989088;
-  background-attachment: fixed;
+.subtitle {
+    animation-name: title-fade;
+    animation-duration: 1s;
 }
