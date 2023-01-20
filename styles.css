@@ -33,7 +33,7 @@
     width: 100%;
     height: 70px;
     animation-name: in-bottom-fade;
-    animation-delay: 2s;
+    animation-delay: 3s;
     animation-duration: 2s;
     animation-fill-mode: forwards;
 }
@@ -45,7 +45,7 @@
     width: 100%;
     height: 50px;
     animation-name: in-bottom-fade;
-    animation-delay: 3s;
+    animation-delay: 4s;
     animation-duration: 2s;
     animation-fill-mode: forwards;
 }
@@ -72,11 +72,17 @@ body {
 }
 
 .title {
+    opacity: 0;
     animation-name: title-fade;
-    animation-duration: 1s;
+    animation-delay: 300ms;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
 }
 
 .subtitle {
+    opacity: 0;
     animation-name: title-fade;
-    animation-duration: 1s;
+    animation-delay: 1500ms;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
 }
