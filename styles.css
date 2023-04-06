@@ -2,87 +2,74 @@
   font-family: "Poppins", sans-serif;
   margin: auto;
   text-align: center;
-}
-
-@keyframes in-bottom-fade {
-    from {
-        opacity: 0%;
-    } 
-    to {
-        opacity: 100%;
-    }
-}
-
-@keyframes title-fade {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes subtitle-fade {
-
-}
-
-.footer1 {
-    opacity: 0;
-    position: absolute;
-    bottom: 0%;
-    width: 100%;
-    height: 70px;
-    animation-name: in-bottom-fade;
-    animation-delay: 3s;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
-}
-
-.footer2 {
-    opacity: 0;
-    position: absolute;
-    bottom: 0%;
-    width: 100%;
-    height: 50px;
-    animation-name: in-bottom-fade;
-    animation-delay: 4s;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
+  color: white;
 }
 
 h1 {
-  font-weight: 600;
-  font-style: semibold;
-  animation-name: title-fade;
+  font-weight: 400;
+  font-style: regular;
 }
 
 body {
   /* background-image: url("background.jpg"); */
-  background: linear-gradient(to right, #f7f6ed, #e0dcbf);
-  background-color: #989088;
-  background-attachment: fixed;
-  
+  /* background: linear-gradient(to right, #f7f6ed, #e0dcbf); */
+  /* background-color: #989088; */
+  background-color: #141414;
+  background-attachment: fixed; 
 }
 
-.content {
+.page {
+    height: 100vh;
+}
+
+.content-group {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateY(-50%) translateX(-50%);
 }
 
-.title {
-    opacity: 0;
-    animation-name: title-fade;
-    animation-delay: 300ms;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
+br {
+    display: block;
+    content: "";
+    margin-top: 5;
 }
 
-.subtitle {
+.instagram-button {
+    display: flex;
+    width: 8vmin;
+    background-color: pink;
+    aspect-ratio: 1;
+    font-size: 6vmin;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
     opacity: 0;
-    animation-name: title-fade;
-    animation-delay: 1500ms;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
+    border-radius: 2vmin;
+    transition: all 600ms cubic-bezier(.18,.49,.06,1);
+}
+
+#instagram-icon {
+    text-decoration: none;
+}
+
+.subtitle, .names {
+    opacity: 0;
+    transition: all 600ms cubic-bezier(.18,.49,.06,1);
+}
+
+.names {
+    transition-delay: 200ms;
+}
+
+.content-group:hover > .instagram-button {
+    opacity: 1;
+    transform: translateY(-300%) translateX(-25%) rotate(7deg);
+}
+
+.content-group:hover > .subtitle, .content-group:hover > .names {
+    opacity: 1;
+    transform: translateY(15%);
+
 }
